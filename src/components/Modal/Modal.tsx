@@ -3,7 +3,11 @@ import TaskButton from '../TaskButton/TaskButton'
 const Modal = () => {
     const [display , setDisplay] = useState(false)
     const HandleIcon = () => {
-        setDisplay(true)
+        setDisplay(false)
+    }
+    const openModal = () =>{
+      console.log("ji")
+      setDisplay(true)
     }
   return (
     <div className= {display ? 'modal-main': 'hide-display'}>
@@ -20,7 +24,7 @@ const Modal = () => {
             </select>
             <span>
 
-            <TaskButton/>
+            <TaskButton onclick = {openModal}/>
             <button className='add-task-button'>Cancel</button>
             </span>
         </form>

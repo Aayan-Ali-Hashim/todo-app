@@ -1,10 +1,9 @@
-import React from 'react'
 
-const TaskButton = () => {
+
+const TaskButton = ({onclick}) => {
   return (
-
     <span>
-      <button className='add-task-button'>Add Task</button>
+      <button className='add-task-button' onClick={onclick}>Add Task</button>
     </span>
   )
 }
